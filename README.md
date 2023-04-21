@@ -1,0 +1,2 @@
+# lab_report_template_ubuntu
+研究室で使う課題提出のためのテンプレート
