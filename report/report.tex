@@ -1,0 +1,51 @@
+\documentclass[a4j]{article}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{listings,jvlisting,here}
+\lstset{
+  basicstyle={\ttfamily},
+  identifierstyle={\small},
+  commentstyle={\smallitshape},
+  keywordstyle={\small\bfseries},
+  ndkeywordstyle={\small},
+  stringstyle={\small\ttfamily},
+  frame={tb},
+  breaklines=true,
+  columns=[l]{fullflexible},
+  numbers=left,
+  xrightmargin=0zw,
+  xleftmargin=3zw,
+  numberstyle={\scriptsize},
+  stepnumber=1,
+  numbersep=1zw,
+  lineskip=-0.5ex
+}
+
+\title{レポートタイトル}
+\author{著者名}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{概要}
+
+\section{タイトル}
+プログラムのソースコードをリスト\ref{blockCode}に示す.
+\lstinputlisting[caption=リストタイトル,label=blockCode]{../src/block_matmul.c}
+
+プログラムを実行したときの様子を図\ref{block_sc}に示す.
+\begin{figure}[H]
+  \centering
+  \includegraphics[keepaspectratio,width=1.0\linewidth]{img/block_sc.png}
+  \caption{行画面}
+  \label{block_sc}
+\end{figure}
+
+\section{考察}
+
+
+\section{感想}
+
+
+\end{document}
