@@ -1,5 +1,1 @@
-cd report
-platex report.tex
-# pxdvi report.dvi
-dvipdfmx report.dvi
-cd ../
+(cd report && platex report.tex && dvipdfmx report.dvi)
