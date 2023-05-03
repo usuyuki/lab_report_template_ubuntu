@@ -1,28 +1,36 @@
-\documentclass[a4j]{article}
-% 画像関連
+\documentclass[mingoth]{jsarticle}
+% 最初の段落も字下げする
+\usepackage{indentfirst}
+% デフォルトだとtabみたいな字下げするので1文字だけにする
+\setlength{\parindent}{1em}
+% Figとtableの日本語化
+\def\fnum@figure{図}
+\def\fnum@table{表}
+% リスト(ソースコード)はjlistingで日本語になる
+% 画像関連                                    　
 \usepackage[dvipdfmx]{graphicx}
 % 表関連
 \usepackage{amssymb, amsmath}
 \usepackage{booktabs}
-% コードブロック関連
-\usepackage{listings,jvlisting,here}
+% コードブロック関連 jlistingにより日本語コメントアウトでも崩れないようにできる
+\usepackage{listings,jlisting,here}
 \lstset{
-  basicstyle={\ttfamily},
-  identifierstyle={\small},
-  commentstyle={\smallitshape},
-  keywordstyle={\small\bfseries},
-  ndkeywordstyle={\small},
-  stringstyle={\small\ttfamily},
-  frame={tb},
-  breaklines=true,
-  columns=[l]{fullflexible},
-  numbers=left,
-  xrightmargin=0zw,
-  xleftmargin=3zw,
-  numberstyle={\scriptsize},
-  stepnumber=1,
-  numbersep=1zw,
-  lineskip=-0.5ex
+	basicstyle={\ttfamily},
+	identifierstyle={\small},
+	commentstyle={\smallitshape},
+	keywordstyle={\small\bfseries},
+	ndkeywordstyle={\small},
+	stringstyle={\small\ttfamily},
+	frame={tb},
+	breaklines=true,
+	columns=[l]{fullflexible},
+	numbers=left,
+	xrightmargin=0zw,
+	xleftmargin=3zw,
+	numberstyle={\scriptsize},
+	stepnumber=1,
+	numbersep=1zw,
+	lineskip=-0.5ex
 }
 
 \title{レポートタイトル}
@@ -41,10 +49,10 @@
 
 プログラムを実行したときの様子を図\ref{block_sc}に示す.
 \begin{figure}[H]
-  \centering
-  \includegraphics[keepaspectratio,width=1.0\linewidth]{img/block_sc.png}
-  \caption{行画面}
-  \label{block_sc}
+	\centering
+	\includegraphics[keepaspectratio,width=1.0\linewidth]{img/block_sc.png}
+	\caption{行画面}
+	\label{block_sc}
 \end{figure}
 
 \section{考察}
