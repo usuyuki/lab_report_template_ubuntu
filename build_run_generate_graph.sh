@@ -2,6 +2,7 @@ algorithmArray=("block" "cyclic")
     # 手法のループ
     for algorithm in "${algorithmArray[@]}"
     do
+    #!/bin/bash
     plotData="plot"
     # 代入するので初期化しておく
     truncate tmp/${algorithm}_avg.txt --size 0
